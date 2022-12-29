@@ -9,10 +9,11 @@ class Engine {
         self.Device = device
         self.CommandQueue = device.makeCommandQueue()
         
-        ShaderLibrary.initialize()
-        VertexDescriptorLibrary.initialize()
-        RenderPipelineDescriptorLibrary.initialize()
-        RenderPipelineStateLibrary.initialize()
+        ShaderLibrary.Initialize()
+        VertexDescriptorLibrary.Initialize()
+        RenderPipelineDescriptorLibrary.Initialize()
+        RenderPipelineStateLibrary.Initialize()
+        MeshLibrary.Initialize()
     }
     
 }
