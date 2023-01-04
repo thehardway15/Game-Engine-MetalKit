@@ -29,6 +29,7 @@
 		FE5B376E295E309D00794223 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5B376D295E309D00794223 /* Player.swift */; };
 		FE5B3770295E314900794223 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5B376F295E314900794223 /* Node.swift */; };
 		FE5B3773295E31F000794223 /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5B3772295E31F000794223 /* Renderable.swift */; };
+		FE5B377729662EA600794223 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5B377629662EA600794223 /* Math.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		FE5B376D295E309D00794223 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		FE5B376F295E314900794223 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		FE5B3772295E31F000794223 /* Renderable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
+		FE5B377629662EA600794223 /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		FE5B371F2958F4DD00794223 /* Game Engine */ = {
 			isa = PBXGroup;
 			children = (
+				FE5B377529662E9500794223 /* Maths */,
 				FE5B3755295DAFC500794223 /* Core */,
 				FE5B3756295DAFDA00794223 /* Libraries */,
 				FE5B3757295DAFE100794223 /* Shaders */,
@@ -228,6 +231,14 @@
 				FE5B376D295E309D00794223 /* Player.swift */,
 			);
 			path = "Game Objects";
+			sourceTree = "<group>";
+		};
+		FE5B377529662E9500794223 /* Maths */ = {
+			isa = PBXGroup;
+			children = (
+				FE5B377629662EA600794223 /* Math.swift */,
+			);
+			path = Maths;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,6 +382,7 @@
 				FE5B375B295DB0BC00794223 /* Engine.swift in Sources */,
 				FE5B37212958F4DD00794223 /* AppDelegate.swift in Sources */,
 				FE5B37502958F72A00794223 /* GameView.swift in Sources */,
+				FE5B377729662EA600794223 /* Math.swift in Sources */,
 				FE5B3768295E12A900794223 /* GameObject.swift in Sources */,
 				FE5B3770295E314900794223 /* Node.swift in Sources */,
 				FE5B375429590FE400794223 /* Types.swift in Sources */,
