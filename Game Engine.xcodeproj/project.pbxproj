@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE504860299E39ED00F07956 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE50485F299E39ED00F07956 /* Scene.swift */; };
+		FE504862299E3B2000F07956 /* SandboxScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE504861299E3B2000F07956 /* SandboxScene.swift */; };
+		FE504865299E7F3F00F07956 /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE504864299E7F3F00F07956 /* SceneManager.swift */; };
 		FE5B37212958F4DD00794223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5B37202958F4DD00794223 /* AppDelegate.swift */; };
 		FE5B37262958F4DD00794223 /* Game_Engine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE5B37242958F4DD00794223 /* Game_Engine.xcdatamodeld */; };
 		FE5B37282958F4DE00794223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE5B37272958F4DE00794223 /* Assets.xcassets */; };
@@ -50,6 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE50485F299E39ED00F07956 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		FE504861299E3B2000F07956 /* SandboxScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandboxScene.swift; sourceTree = "<group>"; };
+		FE504864299E7F3F00F07956 /* SceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
 		FE5B371D2958F4DD00794223 /* Game Engine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game Engine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE5B37202958F4DD00794223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE5B37252958F4DD00794223 /* Game_Engine.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Game_Engine.xcdatamodel; sourceTree = "<group>"; };
@@ -104,6 +110,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE50485E299E39CA00F07956 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FE50485F299E39ED00F07956 /* Scene.swift */,
+				FE504861299E3B2000F07956 /* SandboxScene.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FE504863299E7F2700F07956 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FE504864299E7F3F00F07956 /* SceneManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		FE5B37142958F4DD00794223 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +153,7 @@
 				FE5B377529662E9500794223 /* Maths */,
 				FE5B3755295DAFC500794223 /* Core */,
 				FE5B3756295DAFDA00794223 /* Libraries */,
+				FE504863299E7F2700F07956 /* Managers */,
 				FE5B3757295DAFE100794223 /* Shaders */,
 				FE5B3766295E128A00794223 /* Game Shizz */,
 				FE5B3758295DAFE900794223 /* Display */,
@@ -210,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				FE5B376F295E314900794223 /* Node.swift */,
+				FE50485E299E39CA00F07956 /* Scenes */,
 				FE5B3774295E35CD00794223 /* Game Objects */,
 				FE5B3771295E31E200794223 /* Protocols */,
 			);
@@ -374,12 +399,14 @@
 				FE5B3773295E31F000794223 /* Renderable.swift in Sources */,
 				FE5B3763295DB8C500794223 /* RenderPipelineDescriptorLibrary.swift in Sources */,
 				FE5B3761295DB71700794223 /* VertexDescriptorLibrary.swift in Sources */,
+				FE504860299E39ED00F07956 /* Scene.swift in Sources */,
 				FE5B37522958F9F500794223 /* MyShaders.metal in Sources */,
 				FE5B375D295DB2C700794223 /* Preferences.swift in Sources */,
 				FE5B376C295E2AC000794223 /* MeshLibrary.swift in Sources */,
 				FE5B375F295DB40400794223 /* ShaderLibrary.swift in Sources */,
 				FE5B376A295E154800794223 /* Renderer.swift in Sources */,
 				FE5B375B295DB0BC00794223 /* Engine.swift in Sources */,
+				FE504865299E7F3F00F07956 /* SceneManager.swift in Sources */,
 				FE5B37212958F4DD00794223 /* AppDelegate.swift in Sources */,
 				FE5B37502958F72A00794223 /* GameView.swift in Sources */,
 				FE5B377729662EA600794223 /* Math.swift in Sources */,
@@ -388,6 +415,7 @@
 				FE5B375429590FE400794223 /* Types.swift in Sources */,
 				FE5B37262958F4DD00794223 /* Game_Engine.xcdatamodeld in Sources */,
 				FE5B376E295E309D00794223 /* Player.swift in Sources */,
+				FE504862299E3B2000F07956 /* SandboxScene.swift in Sources */,
 				FE5B3765295DBD8F00794223 /* RenderPipelineStateLibrary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
