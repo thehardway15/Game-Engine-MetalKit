@@ -1,8 +1,22 @@
 import MetalKit
 
-class Renderer: NSObject {}
+class Renderer: NSObject {
+    
+    public static var ScreenSize = float2(0)
+    
+    init(_ mtkView: MTKView) {
+        super.init()
+        updateScreenSize(view: mtkView)
+    }
+    
+}
 
 extension Renderer: MTKViewDelegate {
+    
+    public func updateScreenSize(view: MTKView) {
+        Renderer.ScreenSize = float2(Float(view.bounds.width), Float(view.bounds.height))
+    }
+    
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
         // When the window is resized
     }
