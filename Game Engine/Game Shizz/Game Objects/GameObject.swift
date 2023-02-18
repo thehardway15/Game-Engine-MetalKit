@@ -9,6 +9,7 @@ class GameObject: Node {
     
     init(meshType: MeshTypes) {
         mesh = MeshLibrary.Mesh(meshType)
+        mesh.setInstanceCount(1)
     }
     
     override func update(deltaTime: Float) {
@@ -26,12 +27,11 @@ extension GameObject: Renderable {
         renderCommandEncoder.setDepthStencilState(DepthStencilStateLibrary.DepthStencilState(.Less))
         
         // Vertex shader
-        renderCommandEncoder.setVertexBuffer(mesh.vertexBuffer, offset: 0, index: 0)
         renderCommandEncoder.setVertexBytes(&modelConstants, length: ModelConstants.stride, index: 2)
         
         // Fragment shader
         renderCommandEncoder.setFragmentBytes(&material, length: Material.stride, index: 1)
-        renderCommandEncoder.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: mesh.vertexCount)
+        mesh.drawPrimitives(renderCommandEncoder)
     }
 }
 
