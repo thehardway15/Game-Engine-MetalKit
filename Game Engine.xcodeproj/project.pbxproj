@@ -18,6 +18,7 @@
 		FE50487329A0249500F07956 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE50487229A0249500F07956 /* CameraManager.swift */; };
 		FE50487529A039FB00F07956 /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE50487429A039FB00F07956 /* Cube.swift */; };
 		FE50487729A03BE100F07956 /* DepthStencilStateLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE50487629A03BE100F07956 /* DepthStencilStateLibrary.swift */; };
+		FE50487A29A0D41500F07956 /* ColorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE50487929A0D41500F07956 /* ColorUtil.swift */; };
 		FE5B37212958F4DD00794223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5B37202958F4DD00794223 /* AppDelegate.swift */; };
 		FE5B37262958F4DD00794223 /* Game_Engine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE5B37242958F4DD00794223 /* Game_Engine.xcdatamodeld */; };
 		FE5B37282958F4DE00794223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE5B37272958F4DE00794223 /* Assets.xcassets */; };
@@ -72,6 +73,7 @@
 		FE50487229A0249500F07956 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		FE50487429A039FB00F07956 /* Cube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cube.swift; sourceTree = "<group>"; };
 		FE50487629A03BE100F07956 /* DepthStencilStateLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthStencilStateLibrary.swift; sourceTree = "<group>"; };
+		FE50487929A0D41500F07956 /* ColorUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtil.swift; sourceTree = "<group>"; };
 		FE5B371D2958F4DD00794223 /* Game Engine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game Engine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE5B37202958F4DD00794223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE5B37252958F4DD00794223 /* Game_Engine.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Game_Engine.xcdatamodel; sourceTree = "<group>"; };
@@ -163,6 +165,14 @@
 			path = Cameras;
 			sourceTree = "<group>";
 		};
+		FE50487829A0D40500F07956 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FE50487929A0D41500F07956 /* ColorUtil.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		FE5B37142958F4DD00794223 = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +196,7 @@
 		FE5B371F2958F4DD00794223 /* Game Engine */ = {
 			isa = PBXGroup;
 			children = (
+				FE50487829A0D40500F07956 /* Utils */,
 				FE5B377529662E9500794223 /* Maths */,
 				FE5B3755295DAFC500794223 /* Core */,
 				FE5B3756295DAFDA00794223 /* Libraries */,
@@ -439,6 +450,7 @@
 				FE5B3773295E31F000794223 /* Renderable.swift in Sources */,
 				FE5B3763295DB8C500794223 /* RenderPipelineDescriptorLibrary.swift in Sources */,
 				FE5B3761295DB71700794223 /* VertexDescriptorLibrary.swift in Sources */,
+				FE50487A29A0D41500F07956 /* ColorUtil.swift in Sources */,
 				FE504860299E39ED00F07956 /* Scene.swift in Sources */,
 				FE5B37522958F9F500794223 /* MyShaders.metal in Sources */,
 				FE5B375D295DB2C700794223 /* Preferences.swift in Sources */,
