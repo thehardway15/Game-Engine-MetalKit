@@ -21,24 +21,24 @@ extension Renderer: MTKViewDelegate {
     }
     
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
-        // When the window is resized
+        updateScreenSize(view: view)
     }
     
     func draw(in view: MTKView) {
-        // draw view
-        guard let drawable = view.currentDrawable, let renderPassDescriptor = view.currentRenderPassDescriptor else { return }
+        guard let renderPassDescriptor = view.currentRenderPassDescriptor else { return }
         
         let commandBuffer = Engine.CommandQueue.makeCommandBuffer()
+        commandBuffer?.label = "My Command Buffer"
+        
         let renderCommandEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: renderPassDescriptor)
+        renderCommandEncoder?.label = "First Render Command Encoder"
         
+        renderCommandEncoder?.pushDebugGroup("Starting Render")
         SceneManger.TickScene(renderCommandEncoder: renderCommandEncoder!, deltaTime: 1 / Float(view.preferredFramesPerSecond))
-        
-        // Send info to renderCommandEncoder
+        renderCommandEncoder?.popDebugGroup()
         
         renderCommandEncoder?.endEncoding()
-        commandBuffer?.present(drawable)
+        commandBuffer?.present(view.currentDrawable!)
         commandBuffer?.commit()
     }
-    
-    
 }
