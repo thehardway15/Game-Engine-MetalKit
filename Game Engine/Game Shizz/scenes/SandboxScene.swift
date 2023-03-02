@@ -18,11 +18,8 @@ class SandboxScene: Scene {
         
         debugCamera.setPositionZ(5)
         
+        quad.setTexture(.PartyPirateParrot)
         addChild(quad)
-    }
-    
-    override func doUpdate() {
-        quad.setPositionX(cos(GameTime.TotalGameTime))
     }
     
 }

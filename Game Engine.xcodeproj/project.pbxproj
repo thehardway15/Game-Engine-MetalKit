@@ -53,6 +53,9 @@
 		FE5B3770295E314900794223 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5B376F295E314900794223 /* Node.swift */; };
 		FE5B3773295E31F000794223 /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5B3772295E31F000794223 /* Renderable.swift */; };
 		FE5B377729662EA600794223 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5B377629662EA600794223 /* Math.swift */; };
+		FE77A2B529B1512200F4F5CE /* PartyPirateParot.png in Resources */ = {isa = PBXBuildFile; fileRef = FE77A2B429B1512200F4F5CE /* PartyPirateParot.png */; };
+		FE77A2B729B1528E00F4F5CE /* TextureLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE77A2B629B1528E00F4F5CE /* TextureLibrary.swift */; };
+		FE77A2B929B155A300F4F5CE /* SamplerStateLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE77A2B829B155A300F4F5CE /* SamplerStateLibrary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +126,9 @@
 		FE5B376F295E314900794223 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		FE5B3772295E31F000794223 /* Renderable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
 		FE5B377629662EA600794223 /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		FE77A2B429B1512200F4F5CE /* PartyPirateParot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PartyPirateParot.png; sourceTree = "<group>"; };
+		FE77A2B629B1528E00F4F5CE /* TextureLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureLibrary.swift; sourceTree = "<group>"; };
+		FE77A2B829B155A300F4F5CE /* SamplerStateLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerStateLibrary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				FE5B376B295E2AC000794223 /* MeshLibrary.swift */,
+				FE77A2B629B1528E00F4F5CE /* TextureLibrary.swift */,
 			);
 			path = libraries;
 			sourceTree = "<group>";
@@ -313,6 +320,7 @@
 		FE5B3755295DAFC500794223 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				FE77A2B329B150D200F4F5CE /* res */,
 				FE504866299E86D200F07956 /* input */,
 				FE5048A729A1863F00F07956 /* maths */,
 				FE5048A829A1865400F07956 /* types */,
@@ -333,6 +341,7 @@
 				FE5B3764295DBD8F00794223 /* RenderPipelineStateLibrary.swift */,
 				FE5B3760295DB71700794223 /* VertexDescriptorLibrary.swift */,
 				FE5B375E295DB40400794223 /* VertexShaderLibrary.swift */,
+				FE77A2B829B155A300F4F5CE /* SamplerStateLibrary.swift */,
 			);
 			path = libraries;
 			sourceTree = "<group>";
@@ -388,6 +397,14 @@
 				FE5048C029A2278B00F07956 /* Quad.swift */,
 			);
 			path = "game bbjects";
+			sourceTree = "<group>";
+		};
+		FE77A2B329B150D200F4F5CE /* res */ = {
+			isa = PBXGroup;
+			children = (
+				FE77A2B429B1512200F4F5CE /* PartyPirateParot.png */,
+			);
+			path = res;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -496,6 +513,7 @@
 			files = (
 				FE5B37282958F4DE00794223 /* Assets.xcassets in Resources */,
 				FE5B372B2958F4DE00794223 /* Main.storyboard in Resources */,
+				FE77A2B529B1512200F4F5CE /* PartyPirateParot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +551,7 @@
 				FE5048C129A2278B00F07956 /* Quad.swift in Sources */,
 				FE5048BB29A21F6500F07956 /* InstancedShaders.metal in Sources */,
 				FE50487C29A0DF9B00F07956 /* InstancedGameObject.swift in Sources */,
+				FE77A2B729B1528E00F4F5CE /* TextureLibrary.swift in Sources */,
 				FE50487329A0249500F07956 /* CameraManager.swift in Sources */,
 				FE50486C299E8A0900F07956 /* Mouse.swift in Sources */,
 				FE50487129A01CD400F07956 /* DebugCamera.swift in Sources */,
@@ -546,6 +565,7 @@
 				FE5048AD29A1887500F07956 /* Library.swift in Sources */,
 				FE50487729A03BE100F07956 /* DepthStencilStateLibrary.swift in Sources */,
 				FE504865299E7F3F00F07956 /* SceneManager.swift in Sources */,
+				FE77A2B929B155A300F4F5CE /* SamplerStateLibrary.swift in Sources */,
 				FE5B37212958F4DD00794223 /* AppDelegate.swift in Sources */,
 				FE5048BF29A2247C00F07956 /* Graphics.swift in Sources */,
 				FE5B37502958F72A00794223 /* GameView.swift in Sources */,

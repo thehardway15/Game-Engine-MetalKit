@@ -41,6 +41,12 @@ public struct Basic_VertexDescriptor: VertexDescriptor {
         vertexDescriptor.attributes[1].bufferIndex = 0
         vertexDescriptor.attributes[1].offset = float3.size
         
+        // Texture Coordination
+        vertexDescriptor.attributes[2].format = .float2
+        vertexDescriptor.attributes[2].bufferIndex = 0
+        vertexDescriptor.attributes[2].offset = float4.size + float3.size
+
+        
         vertexDescriptor.layouts[0].stride = Vertex.stride
     }
 }
