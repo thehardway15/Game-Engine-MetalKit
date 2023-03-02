@@ -56,6 +56,10 @@
 		FE77A2B529B1512200F4F5CE /* PartyPirateParot.png in Resources */ = {isa = PBXBuildFile; fileRef = FE77A2B429B1512200F4F5CE /* PartyPirateParot.png */; };
 		FE77A2B729B1528E00F4F5CE /* TextureLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE77A2B629B1528E00F4F5CE /* TextureLibrary.swift */; };
 		FE77A2B929B155A300F4F5CE /* SamplerStateLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE77A2B829B155A300F4F5CE /* SamplerStateLibrary.swift */; };
+		FE77A2BC29B1592800F4F5CE /* cruiser.bmp in Resources */ = {isa = PBXBuildFile; fileRef = FE77A2BB29B1592800F4F5CE /* cruiser.bmp */; };
+		FE77A2BE29B1597900F4F5CE /* cruiser.mtl.txt in Resources */ = {isa = PBXBuildFile; fileRef = FE77A2BD29B1597900F4F5CE /* cruiser.mtl.txt */; };
+		FE77A2C229B15F3200F4F5CE /* Cruiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE77A2C129B15F3200F4F5CE /* Cruiser.swift */; };
+		FE77A2C429B1602900F4F5CE /* cruiser.obj in Resources */ = {isa = PBXBuildFile; fileRef = FE77A2C329B1602900F4F5CE /* cruiser.obj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +133,10 @@
 		FE77A2B429B1512200F4F5CE /* PartyPirateParot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PartyPirateParot.png; sourceTree = "<group>"; };
 		FE77A2B629B1528E00F4F5CE /* TextureLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureLibrary.swift; sourceTree = "<group>"; };
 		FE77A2B829B155A300F4F5CE /* SamplerStateLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerStateLibrary.swift; sourceTree = "<group>"; };
+		FE77A2BB29B1592800F4F5CE /* cruiser.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = cruiser.bmp; sourceTree = "<group>"; };
+		FE77A2BD29B1597900F4F5CE /* cruiser.mtl.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cruiser.mtl.txt; sourceTree = "<group>"; };
+		FE77A2C129B15F3200F4F5CE /* Cruiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cruiser.swift; sourceTree = "<group>"; };
+		FE77A2C329B1602900F4F5CE /* cruiser.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cruiser.obj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -395,6 +403,7 @@
 				FE5B376D295E309D00794223 /* Pointer.swift */,
 				FE5048A529A15A8D00F07956 /* CubeCollection.swift */,
 				FE5048C029A2278B00F07956 /* Quad.swift */,
+				FE77A2C129B15F3200F4F5CE /* Cruiser.swift */,
 			);
 			path = "game bbjects";
 			sourceTree = "<group>";
@@ -402,9 +411,20 @@
 		FE77A2B329B150D200F4F5CE /* res */ = {
 			isa = PBXGroup;
 			children = (
+				FE77A2BA29B1591700F4F5CE /* cruiser */,
 				FE77A2B429B1512200F4F5CE /* PartyPirateParot.png */,
 			);
 			path = res;
+			sourceTree = "<group>";
+		};
+		FE77A2BA29B1591700F4F5CE /* cruiser */ = {
+			isa = PBXGroup;
+			children = (
+				FE77A2BD29B1597900F4F5CE /* cruiser.mtl.txt */,
+				FE77A2C329B1602900F4F5CE /* cruiser.obj */,
+				FE77A2BB29B1592800F4F5CE /* cruiser.bmp */,
+			);
+			path = cruiser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -511,9 +531,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE77A2BE29B1597900F4F5CE /* cruiser.mtl.txt in Resources */,
 				FE5B37282958F4DE00794223 /* Assets.xcassets in Resources */,
+				FE77A2BC29B1592800F4F5CE /* cruiser.bmp in Resources */,
 				FE5B372B2958F4DE00794223 /* Main.storyboard in Resources */,
 				FE77A2B529B1512200F4F5CE /* PartyPirateParot.png in Resources */,
+				FE77A2C429B1602900F4F5CE /* cruiser.obj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +570,7 @@
 				FE5048B429A18AFD00F07956 /* Entities.swift in Sources */,
 				FE5048AB29A1868500F07956 /* GameTime.swift in Sources */,
 				FE5B375D295DB2C700794223 /* Preferences.swift in Sources */,
+				FE77A2C229B15F3200F4F5CE /* Cruiser.swift in Sources */,
 				FE5B376C295E2AC000794223 /* MeshLibrary.swift in Sources */,
 				FE5048C129A2278B00F07956 /* Quad.swift in Sources */,
 				FE5048BB29A21F6500F07956 /* InstancedShaders.metal in Sources */,
