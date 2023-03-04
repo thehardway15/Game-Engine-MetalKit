@@ -1,11 +1,14 @@
 import MetalKit
 
 enum MeshTypes {
+    case None
+    
     case Triangle_Custom
     case Quad_Custom
     case Cube_Custom
     
     case Cruiser
+    case Sphere
 }
 
 class MeshLibrary: Library<MeshTypes, Mesh> {
@@ -13,11 +16,13 @@ class MeshLibrary: Library<MeshTypes, Mesh> {
     private var _library: [MeshTypes:Mesh] = [:]
     
     override func fillLibrary() {
+        _library.updateValue(NoMesh(), forKey: .None)
         _library.updateValue(Triangle_CustomMesh(), forKey: .Triangle_Custom)
         _library.updateValue(Quad_CustomMesh(), forKey: .Quad_Custom)
         _library.updateValue(Cube_CustomMesh(), forKey: .Cube_Custom)
         
         _library.updateValue(ModelMesh(modelName: "cruiser"), forKey: .Cruiser)
+        _library.updateValue(ModelMesh(modelName: "sphere"), forKey: .Sphere)
     }
     
     override subscript(type: MeshTypes) -> Mesh {
@@ -29,6 +34,11 @@ class MeshLibrary: Library<MeshTypes, Mesh> {
 protocol Mesh {
     func setInstanceCount(_ count: Int)
     func drawPrimitives(_ renderCommandEncoder: MTLRenderCommandEncoder)
+}
+
+class NoMesh: Mesh {
+    func setInstanceCount(_ count: Int) {}
+    func drawPrimitives(_ renderCommandEncoder: MTLRenderCommandEncoder) {}
 }
 
 class ModelMesh: Mesh {
@@ -46,6 +56,7 @@ class ModelMesh: Mesh {
         (descriptor.attributes[0] as! MDLVertexAttribute).name = MDLVertexAttributePosition
         (descriptor.attributes[1] as! MDLVertexAttribute).name = MDLVertexAttributeColor
         (descriptor.attributes[2] as! MDLVertexAttribute).name = MDLVertexAttributeTextureCoordinate
+        (descriptor.attributes[3] as! MDLVertexAttribute).name = MDLVertexAttributeNormal
         
         let bufferAllocator = MTKMeshBufferAllocator(device: Engine.Device)
         let asset: MDLAsset = MDLAsset(url: assetURL, vertexDescriptor: descriptor, bufferAllocator: bufferAllocator)
@@ -107,8 +118,14 @@ class CustomMesh: Mesh {
         renderCommandEncoder.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: vertexCount, instanceCount: _instanceCount)
     }
     
-    func addVertex(position: float3, color: float4 = float4(1, 0, 1, 1), textureCoordinate: float2 = float2(0)) {
-        _vertices.append(Vertex(position: position, color: color, textureCoordinate: textureCoordinate))
+    func addVertex(position: float3,
+                   color: float4 = float4(1, 0, 1, 1),
+                   textureCoordinate: float2 = float2(0, 0),
+                   normal: float3 = float3(0, 1, 0)) {
+        _vertices.append(Vertex(position: position,
+                                color: color,
+                                textureCoordinate: textureCoordinate,
+                                normal: normal))
     }
 }
 

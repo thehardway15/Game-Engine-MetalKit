@@ -44,7 +44,7 @@ extension GameObject: Renderable{
 
 //Material Properties
 extension GameObject {
-    public func setColor(_ color: float4){
+    public func setMaterialColor(_ color: float4){
         self.material.color = color
         self.material.useMaterialColor = true
         self.material.useTexture = false
@@ -56,4 +56,30 @@ extension GameObject {
         self.material.useTexture = true
         self.material.useMaterialColor = false
     }
+    
+    // Is Lit
+    public func setMaterialIsLit(_ isLit: Bool) { self.material.isLit = isLit }
+    public func getMaterialIsLit()->Bool { return self.material.isLit }
+    
+    // Ambient
+    public func setMaterialAmbient(_ ambient: float3) { self.material.ambient = ambient }
+    public func setMaterialAmbient(_ ambient: Float) { self.material.ambient = float3(ambient, ambient, ambient) }
+    public func addMaterialAmbient(_ value: Float) { self.material.ambient += value }
+    public func getMaterialAmbient()->float3 { return self.material.ambient }
+    
+    // Diffuse
+    public func setMaterialDiffuse(_ diffuse: float3) { self.material.diffuse = diffuse }
+    public func setMaterialDiffuse(_ diffuse: Float) { self.material.diffuse = float3(diffuse, diffuse, diffuse) }
+    public func addMaterialDiffuse(_ value: Float) { self.material.diffuse += value }
+    public func getMaterialDiffuse()->float3 { return self.material.diffuse }
+    
+    // Specular
+    public func setMaterialSpecular(_ specular: float3) { self.material.specular = specular }
+    public func setMaterialSpecular(_ specular: Float) { self.material.specular = float3(specular, specular, specular) }
+    public func addMaterialSpecular(_ value: Float) { self.material.specular += value }
+    public func getMaterialSpecular()->float3 { return self.material.specular }
+    
+    // Shininess
+    public func setMaterialShininess(_ shininess: Float) { self.material.shininess = shininess }
+    public func getShininess()->Float { return self.material.shininess }
 }
