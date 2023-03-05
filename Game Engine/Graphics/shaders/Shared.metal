@@ -5,6 +5,9 @@
 //  Created by Damian Wiśniewski on 19/02/2023.
 //
 
+#ifndef SHARED_METAL
+#define SHARED_METAL
+
 #include <metal_stdlib>
 using namespace metal;
 
@@ -55,6 +58,8 @@ struct LightData {
     float brightness;
     
     float ambientIntensity;
-    float difuesIntensity;
+    float diffuseIntensity;
     float specularIntensity;
 };
+
+#endif
