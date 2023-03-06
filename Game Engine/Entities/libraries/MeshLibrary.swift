@@ -142,13 +142,13 @@ class Triangle_CustomMesh: CustomMesh {
 class Quad_CustomMesh: CustomMesh {
     
     override func createVertices() {
-        addVertex(position: float3( 1,  1, 0), color: float4(1, 0, 0, 1), textureCoordinate: float2(1, 0))
-        addVertex(position: float3(-1,  1, 0), color: float4(0, 1, 0, 1), textureCoordinate: float2(0, 0))
-        addVertex(position: float3(-1, -1, 0), color: float4(0, 0, 1, 1), textureCoordinate: float2(0, 1))
+        addVertex(position: float3( 1,  1, 0), color: float4(1, 0, 0, 1), textureCoordinate: float2(1, 0), normal: float3(0, 0, 1))
+        addVertex(position: float3(-1,  1, 0), color: float4(0, 1, 0, 1), textureCoordinate: float2(0, 0), normal: float3(0, 0, 1))
+        addVertex(position: float3(-1, -1, 0), color: float4(0, 0, 1, 1), textureCoordinate: float2(0, 1), normal: float3(0, 0, 1))
         
-        addVertex(position: float3( 1,  1, 0), color: float4(1, 0, 0, 1), textureCoordinate: float2(1, 0))
-        addVertex(position: float3(-1, -1, 0), color: float4(0, 0, 1, 1), textureCoordinate: float2(0, 1))
-        addVertex(position: float3( 1, -1, 0), color: float4(1, 1, 0, 1), textureCoordinate: float2(1, 1))
+        addVertex(position: float3( 1,  1, 0), color: float4(1, 0, 0, 1), textureCoordinate: float2(1, 0), normal: float3(0, 0, 1))
+        addVertex(position: float3(-1, -1, 0), color: float4(0, 0, 1, 1), textureCoordinate: float2(0, 1), normal: float3(0, 0, 1))
+        addVertex(position: float3( 1, -1, 0), color: float4(1, 1, 0, 1), textureCoordinate: float2(1, 1), normal: float3(0, 0, 1))
 
     }
     

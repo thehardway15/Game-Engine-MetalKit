@@ -8,50 +8,33 @@
 class SandboxScene: Scene {
     
     var debugCamera = DebugCamera()
-    var cruiser = Cruiser()
-    
-    var leftSun = Sun()
-    var middleSun = Sun()
-    var rightSun = Sun()
+    var quad = Quad()
+    var sun = Sun()
     
     override func buildScene() {
         debugCamera.setPosition(0, 0, 6)
         addCamera(debugCamera)
         
-        leftSun.setPosition(-2, 2, 0)
-        leftSun.setMaterialIsLit(false)
-        leftSun.setMaterialColor(1, 0, 0, 1)
-        leftSun.setLightColor(1, 0, 0)
-        leftSun.setScale(0.2)
-        addLight(leftSun)
+        sun.setPosition(0, 2, 0)
+        sun.setMaterialIsLit(false)
+        sun.setLightBrightness(0.3)
+        sun.setMaterialColor(1, 1, 1, 1)
+        sun.setLightColor(1, 1, 1)
+        addLight(sun)
         
-        middleSun.setPosition(0, 2, 0)
-        middleSun.setLightBrightness(0.3)
-        middleSun.setMaterialIsLit(false)
-        middleSun.setMaterialColor(1, 1, 1, 1)
-        middleSun.setLightColor(1, 1, 1)
-        middleSun.setScale(0.2)
-        addLight(middleSun)
+        quad.setMaterialAmbient(0.01)
+        quad.setMaterialShininess(10)
+        quad.setMaterialSpecular(5)
+        quad.setTexture(.PartyPirateParrot)
+        addChild(quad)
         
-        rightSun.setPosition(2, 2, 0)
-        rightSun.setMaterialIsLit(false)
-        rightSun.setMaterialColor(0, 0, 1, 1)
-        rightSun.setLightColor(0, 0, 1)
-        rightSun.setScale(0.2)
-        addLight(rightSun)
-
-        cruiser.setMaterialAmbient(0.01)
-        cruiser.setRotationX(0.3)
-        addChild(cruiser)
     }
     
     override func doUpdate() {
         if(Mouse.IsMouseButtonPressed(button: .LEFT)) {
-            cruiser.rotateX(Mouse.GetDY() * GameTime.DeltaTime)
-            cruiser.rotateY(Mouse.GetDX() * GameTime.DeltaTime)
+            quad.rotateX(Mouse.GetDY() * GameTime.DeltaTime)
+            quad.rotateY(Mouse.GetDX() * GameTime.DeltaTime)
         }
-        
-        cruiser.setMaterialShininess(cruiser.getShininess() + Mouse.GetDWheel())
     }
     
 }
